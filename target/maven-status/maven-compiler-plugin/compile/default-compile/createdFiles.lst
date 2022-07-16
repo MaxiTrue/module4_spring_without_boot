@@ -1,0 +1,15 @@
+ru\practicum\user\UserServiceImpl.class
+ru\practicum\item\ItemRepository.class
+ru\practicum\item\ItemController.class
+ru\practicum\user\User.class
+ru\practicum\item\ItemServiceImpl.class
+ru\practicum\user\UserRepository.class
+ru\practicum\user\UserController.class
+ru\practicum\user\UserService.class
+ru\practicum\LaterApplication.class
+ru\practicum\item\ItemService.class
+ru\practicum\TestServlet.class
+ru\practicum\item\ItemRepositoryImpl.class
+ru\practicum\item\Item.class
+ru\practicum\config\PersistenceConfig.class
+ru\practicum\user\FakeUserRepository.class
