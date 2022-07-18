@@ -12,12 +12,13 @@ public class UserServiceImpl implements UserService{
     private final UserRepository userRepository;
 
     @Override
-    public Collection<User> getAllUsers() {
-        return userRepository.getAllUsers();
+    public Collection<UserDto> getAllUsers() {
+        return UserMapper.mapToUserDto(userRepository.getAllUsers());
     }
 
     @Override
-    public User saveUser(User user) {
-        return userRepository.saveUser(user);
+    public UserDto saveUser(UserDto userDto) {
+        User user = userRepository.saveUser(UserMapper.mapToNewUser(userDto));
+        return UserMapper.mapToUserDto(user);
     }
 }

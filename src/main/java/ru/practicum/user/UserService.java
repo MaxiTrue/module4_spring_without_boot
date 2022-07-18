@@ -4,8 +4,8 @@ import java.util.Collection;
 
 public interface UserService {
 
-    Collection<User> getAllUsers();
+    Collection<UserDto> getAllUsers();
 
-    User saveUser(User user);
+    UserDto saveUser(UserDto userDto);
 
 }

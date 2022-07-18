@@ -13,13 +13,13 @@ public class UserController {
     private final UserService userService;
 
     @GetMapping
-    public Collection<User> getAllUsers() {
+    public Collection<UserDto> getAllUsers() {
         return userService.getAllUsers();
     }
 
-    @PutMapping
-    public User saveNewUser (@RequestBody User user){
-       return userService.saveUser(user);
+    @PostMapping
+    public UserDto saveNewUser (@RequestBody UserDto userDto){
+       return userService.saveUser(userDto);
     }
 
 }

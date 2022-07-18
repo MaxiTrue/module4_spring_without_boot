@@ -2,6 +2,7 @@ package ru.practicum.user;
 
 import org.springframework.stereotype.Repository;
 
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -33,8 +34,11 @@ public class FakeUserRepository implements UserRepository{
     private static User createFakeUser(long id) {
         User fakeUser = new User();
         fakeUser.setId(id);
+        fakeUser.setFirstName("Akakiy #");
+        fakeUser.setLastName("Akakievich #" + id);
         fakeUser.setEmail("mail" + id + "@example.com");
-        fakeUser.setName("Akakiy Akakievich #" + id);
+        fakeUser.setRegistrationDate(Instant.now());
+        fakeUser.setState(UserState.ACTIVE);
         return fakeUser;
     }
 

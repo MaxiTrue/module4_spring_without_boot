@@ -12,13 +12,14 @@ public class ItemServiceImpl implements ItemService {
     ItemRepository itemRepository;
 
     @Override
-    public Collection<Item> getItems(Long userId) {
-        return itemRepository.findByUserId(userId);
+    public Collection<ItemDto> getItems(Long userId) {
+        return ItemMapper.mapToItemDto(itemRepository.findByUserId(userId));
     }
 
     @Override
-    public Item addNewItem(Long userId, Item item) {
-        return null;
+    public ItemDto addNewItem(Long userId, ItemDto itemDto) {
+        Item item = itemRepository.save(ItemMapper.mapToItem(itemDto, userId));
+        return ItemMapper.mapToItemDto(itemRepository.save(item));
     }
 
     @Override
